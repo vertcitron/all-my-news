@@ -2,7 +2,7 @@ export default class {
   private wrapper: HTMLDivElement
   private label: HTMLLabelElement
   private input: HTMLInputElement
-  private onChanged = (e: Event) => {
+  private onChanged = (value: string) => {
     console.error('A handler for TextInput "change" event has not been defined yet...')
   }
 
@@ -24,7 +24,23 @@ export default class {
 
   private onKeydown = (e: KeyboardEvent) => {
     if (e.code.includes('Enter')) {
-      this.onChanged(e)
+      this.onChanged(this.input.value)
     }
+  }
+
+  onChange (f: (value: string) => void) {
+    this.onChanged = f
+  }
+
+  get value () {
+    return this.input.value
+  }
+
+  set value (v: string) {
+    this.input.value = v
+  }
+
+  clear () {
+    this.input.value = ''
   }
 }
