@@ -6,7 +6,7 @@ export default class {
 
   constructor (parent: HTMLElement, text: string, variant: string = '') {
     this.button = document.createElement('button')
-    this.button.className = variant
+    if (variant) this.button.className = variant
     this.button.textContent = text
     this.button.addEventListener('click', (e: MouseEvent) => {
       this.clickCallback()

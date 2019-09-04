@@ -1,15 +1,12 @@
 
 import Title from './components/Title'
-import Button from './components/Button'
-import TextInput from './components/TextInput'
+import NewFeed from './components/NewFeed';
 
-// inserts some components for testing
+// insert the aggregator's title
 new Title('All My News')
-const clickMe = new Button(document.body, 'Click Me')
-clickMe.onClick(() => {
-  console.warn('Handler changed !')
-})
-const textInput = new TextInput(document.body, 'My Input', 'Enter what you want...')
-textInput.onChange ((value: string) => {
-  console.warn('You entered:', value)
+
+// insert the NewFeed component
+const newFeed = new NewFeed(document.body)
+newFeed.onAdd((url: string) => {
+  console.warn('You added the "%s" feed.', url)
 })

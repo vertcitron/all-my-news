@@ -28,11 +28,11 @@ export default class {
     }
   }
 
-  onChange (f: (value: string) => void) {
+  onChange (f: (value: string) => void): void {
     this.onChanged = f
   }
 
-  get value () {
+  get value (): string {
     return this.input.value
   }
 
@@ -40,7 +40,7 @@ export default class {
     this.input.value = v
   }
 
-  clear () {
+  clear (): void {
     this.input.value = ''
   }
 }
