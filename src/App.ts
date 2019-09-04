@@ -1,6 +1,4 @@
-const placeholder = document.createElement('div')
-placeholder.className = "placeholder"
-const title = document.createElement('h1')
-title.textContent = 'All My Feeds'
-placeholder.appendChild(title)
-document.body.appendChild(placeholder)
+import Title from './components/Title'
+
+// inserts the Title component
+new Title('All My News')
