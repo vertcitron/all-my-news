@@ -1,0 +1,32 @@
+$primary-bg: #333333
+$secondary-bg: #888888
+
+$primary-color: #fffdfb
+$secondary-color: #111111
+
+$info: #0000ff
+
+
+@mixin reactive-overlay
+  &:focus
+    outline: none
+  &:hover
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: rgba(black, 20%)
+  &:active
+    color: invert($secondary-color, 100%)
+    box-shadow: 0 0 6px $primary-color
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: rgba(white, 20%)
