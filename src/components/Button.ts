@@ -4,7 +4,7 @@ export default class {
     console.error('An action for this button has not been defined yet.')
   }
 
-  constructor (text: string, parent: HTMLElement, variant: string = '') {
+  constructor (parent: HTMLElement, text: string, variant: string = '') {
     this.button = document.createElement('button')
     this.button.className = variant
     this.button.textContent = text

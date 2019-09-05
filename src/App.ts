@@ -4,4 +4,4 @@ import Button from './components/Button'
 
 // inserts the Title component
 new Title('All My News')
-new Button('Click Me', document.body)
+new Button(document.body, 'Click Me')
