@@ -48,3 +48,29 @@ input[type=text]
     margin-right: 1rem
     padding: 1px 0
     flex: 1
+
+.feeds
+  border-bottom: 1px solid
+  h3
+    text-align: center
+    margin: 1rem 0 0 0
+    padding-bottom: 0.25rem
+    border-bottom: 1px solid
+  &-container
+    padding: 0.25rem 0
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+
+.feed-block
+  cursor: pointer
+  margin: 0 1rem
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  line-height: 1.25rem
+  input[type=checkbox]
+    margin: 0 0.5rem 0 0
+  .striked
+    text-decoration: line-through
+    color: lighten($secondary-bg, 25%)

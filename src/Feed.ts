@@ -8,6 +8,7 @@ export default class {
   readonly title: string = ''
   readonly url: string = ''
   readonly status: string = ''
+  public selected: boolean = true
 
   constructor (raw: RawFeed) {
     this.author = raw.feed.author || ''
